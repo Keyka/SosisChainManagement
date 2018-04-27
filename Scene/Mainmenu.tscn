@@ -38,7 +38,7 @@ content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 
-[node name="Mainmenu" type="Node"]
+[node name="Mainmenu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -50,7 +50,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 30.0
 margin_top = 32.0
-margin_right = 188.0
+margin_right = 306.0
 margin_bottom = 69.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -69,7 +69,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "PRESSSSSSSSSSSSSSSSSSSSSS"
+text = "SOSIS CHAIN MANAGEMENT"
 flat = false
 align = 1
 _sections_unfolded = [ "Theme", "custom_styles" ]

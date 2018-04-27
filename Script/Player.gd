@@ -47,4 +47,5 @@ func _on_btnExperimental_pressed():
 
 
 func _on_btnSecret_pressed():
-	get_tree().change_scene("res://Scene/World.tscn")
+	#get_tree().change_scene("res://Scene/World.tscn")
+	pass

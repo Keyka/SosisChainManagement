@@ -12,6 +12,7 @@ config_version=3
 
 config/name="SCM"
 run/main_scene="res://Scene/Mainmenu.tscn"
+boot_splash/image="res://Untitled-1.png"
 config/icon="res://icon.png"
 
 [display]
