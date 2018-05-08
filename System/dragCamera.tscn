@@ -10,18 +10,16 @@ height = 20.0
 
 [node name="Camera Body" type="KinematicBody2D"]
 
-position = Vector2( 515.416, 294.874 )
+position = Vector2( 640.416, 361.874 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
-dragSpeed = 800
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 shape = SubResource( 1 )
-disabled = true
 
 [node name="Camera2D" type="Camera2D" parent="." index="1"]
 

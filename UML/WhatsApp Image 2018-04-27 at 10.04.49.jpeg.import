@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/WhatsApp Image 2018-04-27 at 10.04.49.jpeg-e018ef2b34868b1a17e11f187414c817.stex"
+
+[deps]
+
+source_file="res://UML/WhatsApp Image 2018-04-27 at 10.04.49.jpeg"
+source_md5="a2e3ca9040571070c5f42c72cd0b4494"
+
+dest_files=[ "res://.import/WhatsApp Image 2018-04-27 at 10.04.49.jpeg-e018ef2b34868b1a17e11f187414c817.stex" ]
+dest_md5="3de259b0bbfd08d3520de535d1d60c6d"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
