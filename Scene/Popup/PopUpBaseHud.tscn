@@ -5,7 +5,7 @@
 [ext_resource path="res://src/PlaceholderHUD/static1.jpg" type="Texture" id=3]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=4]
 
-[node name="PopUpBaseHud" type="Container" index="0"]
+[node name="PopUpBaseHud" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -120,5 +120,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
+
+[connection signal="pressed" from="btnBack" to="." method="_on_btnBack_pressed"]
 
 

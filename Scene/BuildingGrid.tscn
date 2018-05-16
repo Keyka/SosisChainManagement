@@ -3,7 +3,7 @@
 [ext_resource path="res://Script/GridBuilding.gd" type="Script" id=1]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=2]
 
-[node name="BuildingGrid" type="CenterContainer"]
+[node name="BuildingGrid" type="CenterContainer" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -171,5 +171,13 @@ flat = false
 align = 1
 
 [connection signal="pressed" from="Container/btnFarm" to="." method="_on_btnFarm_pressed"]
+
+[connection signal="pressed" from="Container/btnFactory" to="." method="_on_btnFactory_pressed"]
+
+[connection signal="pressed" from="Container/btnMarketing" to="." method="_on_btnMarketing_pressed"]
+
+[connection signal="pressed" from="Container/btnWarehouse" to="." method="_on_btnWarehouse_pressed"]
+
+[connection signal="pressed" from="Container/btnResearch" to="." method="_on_btnResearch_pressed"]
 
 
