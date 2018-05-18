@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="BaseHud" type="Container" index="0"]
+[node name="BaseHud" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -307,6 +307,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 theme = ExtResource( 2 )
 text = "$ 99999999"
+align = 2
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1

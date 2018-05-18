@@ -334,4 +334,12 @@ text = "+"
 flat = false
 align = 1
 
+[connection signal="pressed" from="Container/gridFactory/btnAddChicken" to="." method="_on_btnAddChicken_pressed"]
+
+[connection signal="pressed" from="Container/gridFactory/btnAddCow" to="." method="_on_btnAddCow_pressed"]
+
+[connection signal="pressed" from="Container/gridFactory/btnAddPakanChicken" to="." method="_on_btnAddPakanChicken_pressed"]
+
+[connection signal="pressed" from="Container/gridFactory/lblAddPakanCow" to="." method="_on_lblAddPakanCow_pressed"]
+
 

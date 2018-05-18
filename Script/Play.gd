@@ -3,7 +3,7 @@ extends Node
 #var Global
 var pathStatusBar = "/root/Play/BaseHud/StatusBar/"
 var secondPassed = 0
-var xpDivider = 10.0
+var xpDivider = 120.0
 var xpDivisor = 0.0
 
 func _ready():
@@ -14,9 +14,9 @@ func _on_OneSecond_timeout():
 	if Global.hp == 100 :
 		xpDivisor += 1
 	Global.xp = (xpDivisor/xpDivider) * 100
-	print(Global.xp)
-	print(xpDivider)
-	print(xpDivisor)
+	#print(Global.xp)
+	#print(xpDivider)
+	#print(xpDivisor)
 	if Global.xp >= 100 :
 		Global.level +=1
 		Global.xp = 0.0
@@ -36,7 +36,7 @@ func _on_OneDayIngame_timeout():
 	
 func refreshStatusBar():
 	get_node(pathStatusBar + "vboxLevelContainer/lblLevel").text = String(Global.level)
-	get_node(pathStatusBar + "vboxDateMoney/lblMoney").text = String(Global.money)
+	get_node(pathStatusBar + "vboxDateMoney/lblMoney").text = "$ " + String(Global.money)
 	get_node(pathStatusBar + "vboxDateMoney/lblDate").text = intDate(Global.date)
 	get_node(pathStatusBar + "hboxHpXp/lblXP").text = String(Global.xp).pad_zeros(3).pad_decimals(0) + " %"
 	get_node(pathStatusBar + "hboxHpXp/lblHP").text = String(Global.hp).pad_zeros(3).pad_decimals(0) + " %"

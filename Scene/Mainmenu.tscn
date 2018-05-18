@@ -48,7 +48,7 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Mainmenu" type="Node" index="0"]
+[node name="Mainmenu" type="Node"]
 
 script = ExtResource( 1 )
 
