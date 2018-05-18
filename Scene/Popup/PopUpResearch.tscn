@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Themes/Default.tres" type="Theme" id=1]
+[ext_resource path="res://Script/PopUpResearch.gd" type="Script" id=1]
+[ext_resource path="res://Themes/Default.tres" type="Theme" id=2]
 
 [node name="PopUpResearch" type="Container"]
 
@@ -14,6 +15,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "Grow Direction", "Rect", "custom_constants" ]
 
 [node name="Container" type="TabContainer" parent="." index="0"]
@@ -32,7 +34,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 tab_align = 1
 tabs_visible = true
 _sections_unfolded = [ "Rect" ]
@@ -53,13 +55,12 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 tab_align = 1
 scrolling_enabled = true
 
 [node name="Center" type="CenterContainer" parent="Container/Building" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -78,7 +79,6 @@ use_top_left = false
 
 [node name="Content" type="GridContainer" parent="Container/Building/Center" index="0"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -113,7 +113,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Farm"
 percent_visible = 1.0
 lines_skipped = 0
@@ -135,7 +135,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Lv 1"
 percent_visible = 1.0
 lines_skipped = 0
@@ -157,7 +157,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "$ 100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -179,7 +179,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -204,7 +204,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Factory"
 percent_visible = 1.0
 lines_skipped = 0
@@ -226,7 +226,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Lv 1"
 percent_visible = 1.0
 lines_skipped = 0
@@ -248,7 +248,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "$ 100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -271,7 +271,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -296,7 +296,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Marketing"
 percent_visible = 1.0
 lines_skipped = 0
@@ -318,7 +318,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Lv 1"
 percent_visible = 1.0
 lines_skipped = 0
@@ -340,7 +340,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "$ 100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -363,7 +363,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -388,7 +388,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Warehouse"
 percent_visible = 1.0
 lines_skipped = 0
@@ -410,7 +410,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Lv 1"
 percent_visible = 1.0
 lines_skipped = 0
@@ -432,7 +432,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "$ 100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -455,7 +455,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -480,7 +480,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Research"
 percent_visible = 1.0
 lines_skipped = 0
@@ -502,7 +502,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "Lv 1"
 percent_visible = 1.0
 lines_skipped = 0
@@ -524,7 +524,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 text = "$ 100"
 percent_visible = 1.0
 lines_skipped = 0
@@ -547,7 +547,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -566,8 +566,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 49.0
-margin_right = -1076.0
-margin_bottom = -493.0
+margin_right = -4.0
+margin_bottom = -4.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -577,30 +577,8 @@ size_flags_vertical = 1
 tab_align = 1
 scrolling_enabled = true
 
-[node name="Content" type="GridContainer" parent="Container/Sausage" index="0"]
+[node name="Center" type="CenterContainer" parent="Container/Sausage" index="0"]
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 385.0
-margin_top = 148.0
-margin_right = 726.0
-margin_bottom = 373.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 1
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_constants/vseparation = 10
-custom_constants/hseparation = 20
-columns = 4
-_sections_unfolded = [ "custom_constants" ]
-
-[node name="Center" type="CenterContainer" parent="Container/Sausage" index="1"]
-
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -616,5 +594,682 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 use_top_left = false
+
+[node name="Content" type="GridContainer" parent="Container/Sausage/Center" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 550.0
+margin_top = 260.0
+margin_right = 550.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/vseparation = 10
+custom_constants/hseparation = 20
+columns = 3
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="lblChickenSection" type="Label" parent="Container/Sausage/Center/Content" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 149.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pad" type="Label" parent="Container/Sausage/Center/Content" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_right = 220.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pad2" type="Label" parent="Container/Sausage/Center/Content" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_right = 338.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblEntry" type="Label" parent="Container/Sausage/Center/Content" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 149.0
+margin_bottom = 75.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken CT"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblEntryPrice" type="Label" parent="Container/Sausage/Center/Content" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 44.0
+margin_right = 220.0
+margin_bottom = 75.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnEntryR" type="Button" parent="Container/Sausage/Center/Content" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 41.0
+margin_right = 338.0
+margin_bottom = 78.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblMid" type="Label" parent="Container/Sausage/Center/Content" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 91.0
+margin_right = 149.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken CTX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblMidPrice" type="Label" parent="Container/Sausage/Center/Content" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 91.0
+margin_right = 220.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnMidR" type="Button" parent="Container/Sausage/Center/Content" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 88.0
+margin_right = 338.0
+margin_bottom = 125.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblHigh" type="Label" parent="Container/Sausage/Center/Content" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 138.0
+margin_right = 149.0
+margin_bottom = 169.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken Gaming"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblHighPrice" type="Label" parent="Container/Sausage/Center/Content" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 138.0
+margin_right = 220.0
+margin_bottom = 169.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnHighR" type="Button" parent="Container/Sausage/Center/Content" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 135.0
+margin_right = 338.0
+margin_bottom = 172.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblEx" type="Label" parent="Container/Sausage/Center/Content" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 185.0
+margin_right = 149.0
+margin_bottom = 216.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken Titan"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblExPrice" type="Label" parent="Container/Sausage/Center/Content" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 185.0
+margin_right = 220.0
+margin_bottom = 216.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnExR" type="Button" parent="Container/Sausage/Center/Content" index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 182.0
+margin_right = 338.0
+margin_bottom = 219.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblCowSection" type="Label" parent="Container/Sausage/Center/Content" index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 229.0
+margin_right = 149.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pad3" type="Label" parent="Container/Sausage/Center/Content" index="16"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 229.0
+margin_right = 220.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="pad4" type="Label" parent="Container/Sausage/Center/Content" index="17"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 229.0
+margin_right = 338.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblEntry2" type="Label" parent="Container/Sausage/Center/Content" index="18"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 273.0
+margin_right = 149.0
+margin_bottom = 304.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef Radeoff"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblEntryPrice2" type="Label" parent="Container/Sausage/Center/Content" index="19"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 273.0
+margin_right = 220.0
+margin_bottom = 304.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnEntryR2" type="Button" parent="Container/Sausage/Center/Content" index="20"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 270.0
+margin_right = 338.0
+margin_bottom = 307.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblMid2" type="Label" parent="Container/Sausage/Center/Content" index="21"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 320.0
+margin_right = 149.0
+margin_bottom = 351.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef BX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblMidPrice2" type="Label" parent="Container/Sausage/Center/Content" index="22"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 320.0
+margin_right = 220.0
+margin_bottom = 351.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnMidR2" type="Button" parent="Container/Sausage/Center/Content" index="23"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 317.0
+margin_right = 338.0
+margin_bottom = 354.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblHigh2" type="Label" parent="Container/Sausage/Center/Content" index="24"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 367.0
+margin_right = 149.0
+margin_bottom = 398.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef Mining"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblHighPrice2" type="Label" parent="Container/Sausage/Center/Content" index="25"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 367.0
+margin_right = 220.0
+margin_bottom = 398.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnHighR2" type="Button" parent="Container/Sausage/Center/Content" index="26"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 364.0
+margin_right = 338.0
+margin_bottom = 401.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[node name="lblEx2" type="Label" parent="Container/Sausage/Center/Content" index="27"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 414.0
+margin_right = 149.0
+margin_bottom = 445.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef Vega"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblExPrice2" type="Label" parent="Container/Sausage/Center/Content" index="28"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_top = 414.0
+margin_right = 220.0
+margin_bottom = 445.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnExR2" type="Button" parent="Container/Sausage/Center/Content" index="29"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 240.0
+margin_top = 411.0
+margin_right = 338.0
+margin_bottom = 448.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Research"
+flat = false
+align = 1
+
+[connection signal="pressed" from="Container/Building/Center/Content/btnFarmUpgrade" to="." method="_on_btnFarmUpgrade_pressed"]
+
+[connection signal="pressed" from="Container/Building/Center/Content/btnFactoryUpgrade" to="." method="_on_btnFactoryUpgrade_pressed"]
+
+[connection signal="pressed" from="Container/Building/Center/Content/btnMarketingUpgrade" to="." method="_on_btnMarketingUpgrade_pressed"]
+
+[connection signal="pressed" from="Container/Building/Center/Content/btnWarehouseUpgrade" to="." method="_on_btnWarehouseUpgrade_pressed"]
+
+[connection signal="pressed" from="Container/Building/Center/Content/btnResearchUpgrade" to="." method="_on_btnResearchUpgrade_pressed"]
 
 

@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Settings" ]
 
-[node name="BaseHud" type="Container"]
+[node name="BaseHud" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -58,7 +58,7 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
-[node name="StatusBar" type="HBoxContainer" parent="." index="2"]
+[node name="StatusBar" type="Container" parent="." index="2"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -66,7 +66,7 @@ anchor_right = 0.05
 anchor_bottom = 0.0
 margin_left = 640.0
 margin_top = 10.0
-margin_right = 1106.0
+margin_right = 1180.0
 margin_bottom = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -74,17 +74,16 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_constants/separation = 40
-alignment = 1
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="vboxLevelContainer" type="VBoxContainer" parent="StatusBar" index="0"]
+[node name="vboxLevelContainer" type="Container" parent="StatusBar" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 30.0
+margin_left = 16.0
+margin_right = 46.0
 margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -92,7 +91,6 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-alignment = 1
 
 [node name="lblxLevel" type="Label" parent="StatusBar/vboxLevelContainer" index="0"]
 
@@ -140,22 +138,23 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="hboxHpXp" type="HBoxContainer" parent="StatusBar" index="1"]
+[node name="hboxHpXp" type="Container" parent="StatusBar" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 70.0
-margin_right = 274.0
+margin_left = 86.0
+margin_right = 294.0
 margin_bottom = 80.0
+rect_min_size = Vector2( 206, 80 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
+size_flags_horizontal = 4
 size_flags_vertical = 1
-alignment = 1
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags" ]
 
 [node name="lblxHP" type="Label" parent="StatusBar/hboxHpXp" index="0"]
 
@@ -187,7 +186,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 40.0
 margin_top = 24.0
-margin_right = 101.0
+margin_right = 103.0
 margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -196,7 +195,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 theme = ExtResource( 2 )
-text = "100 %"
+text = "999 %"
 align = 2
 valign = 1
 percent_visible = 1.0
@@ -210,9 +209,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 105.0
+margin_left = 107.0
 margin_top = 24.0
-margin_right = 139.0
+margin_right = 141.0
 margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -233,9 +232,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 143.0
+margin_left = 145.0
 margin_top = 24.0
-margin_right = 204.0
+margin_right = 208.0
 margin_bottom = 55.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -244,7 +243,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 theme = ExtResource( 2 )
-text = "100 %"
+text = "999 %"
 align = 2
 valign = 1
 percent_visible = 1.0
@@ -258,8 +257,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 314.0
-margin_right = 503.0
+margin_left = 334.0
+margin_right = 523.0
 margin_bottom = 80.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -267,7 +266,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-alignment = 1
+alignment = 0
 
 [node name="lblDate" type="Label" parent="StatusBar/vboxDateMoney" index="0"]
 
@@ -275,9 +274,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 7.0
 margin_right = 189.0
-margin_bottom = 38.0
+margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -298,9 +296,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 42.0
+margin_top = 35.0
 margin_right = 189.0
-margin_bottom = 73.0
+margin_bottom = 66.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2

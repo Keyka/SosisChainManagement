@@ -20,7 +20,7 @@ func _on_btnPlay_pressed():
 	Global.location = "BuildingGrid"
 	Global.money = 100
 	Global.hp = 100
-	Global.xp = 0
+	Global.xp = 000
 	Global.level = 1
 	Global.date = 1
 
