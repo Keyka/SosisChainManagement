@@ -13,7 +13,8 @@ func refreshLabel() :
 	get_node("Container/gridFactory/lblChicken").text = str(Global.Chicken).pad_zeros(3)
 
 func _process(delta):
-	refreshLabel()
+	if Global.location == "Farm" :
+		refreshLabel()
 	pass
 
 func _on_btnAddChicken_pressed():

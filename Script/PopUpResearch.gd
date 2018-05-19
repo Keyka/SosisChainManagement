@@ -6,12 +6,25 @@ var hargaFactory = [100,200,300]
 var hargaResearch = [100,400,500]
 var hargaWarehouse = [100,400,500]
 
-func _ready():
+var hargaChicken = [0,1000,2000,3000,5000]
+var hargaBeef = [0, 1500,2500,4000,6000]
+var type = ["Entry", "Mid", "High", "Ex"]
 
+func _ready():
+	for i in range(4) : 
+		get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i] +"R").disabled = true
 	pass
 
 func _process(delta):
-	refreshBuilding()
+	if Global.location == "Research" :
+		refreshBuilding()
+		upgradeButtonDisabler()
+		refreshSausage()
+	pass
+
+#Building
+
+func upgradeButtonDisabler():
 	
 	if Global.lvlResearch == 4:
 		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnResearchUpgrade".disabled = true
@@ -38,9 +51,7 @@ func _process(delta):
 	else : 
 		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnWarehouseUpgrade".disabled = false
 	
-	pass
 
-#Building
 func refreshBuilding():
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFarmLevel").text = "Lv " + str(Global.lvlFarm)
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFactoryLevel").text = "Lv " + str(Global.lvlFactory)
@@ -102,35 +113,82 @@ func _on_btnResearchUpgrade_pressed():
 		get_node("/root/Play/BaseHud/StatusBar/" + "vboxDateMoney/lblMoney").text = "$ " + String(Global.money) 
 		
 	pass # replace with function body
+#Sausage
+func unlockSausage(levelRequirement,bc):
+	if Global.lvlResearch >= levelRequirement :
+		#BC : 1 = Chicken ; 2 = Beef
+		if bc == 1 && Global.money >= hargaChicken[levelRequirement] :
+			Global.sChicken[levelRequirement] = true
+			#print(Global.sChicken[levelRequirement])
+		elif bc == 2 && Global.money >= hargaBeef[levelRequirement] :
+			Global.sBeef[levelRequirement] = true
+		
+	pass
+	
+func refreshSausage():
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblEntryPrice").text = "$ " + str(hargaChicken[1])
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblMidPrice").text = "$ " + str(hargaChicken[2])
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblHighPrice").text = "$ " + str(hargaChicken[3])
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblExPrice").text = "$ " + str(hargaChicken[4])
+	
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblEntryPrice2").text = "$ " + str(hargaBeef[1])
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblMidPrice2").text = "$ " + str(hargaBeef[2])
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblHighPrice2").text = "$ " + str(hargaBeef[3])
+	get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/lblExPrice2").text = "$ " + str(hargaBeef[4])
+	
+	
+	for i in range(1,5) :
+		if Global.sChicken[i] :
+			get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i-1] +"R").text = "Researched"
+			get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i-1] +"R").disabled = true
+		elif !Global.sChicken[i] && i <= Global.lvlResearch :
+			get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i-1] +"R").disabled = false
+		if Global.sBeef[i] :
+			get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i-1] +"R2").text = "Researched"
+			get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i-1] +"R2").disabled = true
+		elif !Global.sBeef[i] && i <= Global.lvlResearch :
+			get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i-1] +"R2").disabled = false
+	
+	
+	pass
 
 #Chicken
+	
 func _on_btnEntryR_pressed():
+	unlockSausage(1,1)
 	pass # replace with function body
 
 
 func _on_btnMidR_pressed():
+	unlockSausage(2,1)
 	pass # replace with function body
 
 
 func _on_btnHighR_pressed():
+	unlockSausage(3,1)
 	pass # replace with function body
 
 
 func _on_btnExR_pressed():
+	unlockSausage(4,1)
 	pass # replace with function body
 
 #Beef
 func _on_btnEntryR2_pressed():
+	unlockSausage(1,2)
 	pass # replace with function body
 
 
 func _on_btnMidR2_pressed():
+	unlockSausage(2,2)
 	pass # replace with function body
 
 
 func _on_btnHighR2_pressed():
+	unlockSausage(3,2)
 	pass # replace with function body
 
 
 func _on_btnExR2_pressed():
+	unlockSausage(4,2)
 	pass # replace with function body

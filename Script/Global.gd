@@ -13,8 +13,8 @@ var lvlMarketing = 1
 var lvlFactory = 1
 var lvlResearch = 1
 var lvlWarehouse = 1
-var sChicken = [false,false,false]
-var sBeef = [false, false, false]
+var sChicken = [true, false,false,false,false]
+var sBeef = [true, false, false, false,false]
 
 #Farm
 var Chicken = 100
