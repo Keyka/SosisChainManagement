@@ -1,6 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="PopUpMarketing" type="Container"]
+[ext_resource path="res://Script/PopUpMarketing.gd" type="Script" id=1]
+[ext_resource path="res://Themes/Default.tres" type="Theme" id=2]
+
+[node name="PopUpMarketing" type="Container" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -12,6 +15,7 @@ mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 _sections_unfolded = [ "Grow Direction", "Rect", "custom_constants" ]
 
 [node name="Container" type="Container" parent="." index="0"]
@@ -32,27 +36,1065 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 _sections_unfolded = [ "Rect" ]
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Container" index="0"]
+[node name="Center" type="CenterContainer" parent="Container" index="0"]
 
-visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 10.0
-margin_top = 10.0
-margin_right = 1110.0
-margin_bottom = 570.0
+margin_right = 1120.0
+margin_bottom = 580.0
 rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
+rect_clip_content = false
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-scroll_horizontal_enabled = true
-scroll_horizontal = 0
-scroll_vertical_enabled = true
-scroll_vertical = 0
+use_top_left = false
 _sections_unfolded = [ "Rect" ]
+
+[node name="HBox" type="HBoxContainer" parent="Container/Center" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 177.0
+margin_top = 177.0
+margin_right = 943.0
+margin_bottom = 402.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 30
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Content" type="GridContainer" parent="Container/Center/HBox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 368.0
+margin_bottom = 225.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+columns = 4
+_sections_unfolded = [ "Theme", "custom_constants" ]
+
+[node name="lblS" type="Label" parent="Container/Center/HBox/Content" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 150.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblSPrice" type="Label" parent="Container/Center/HBox/Content" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 3.0
+margin_right = 254.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnSR" type="Button" parent="Container/Center/HBox/Content" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_right = 311.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnSR3" type="Button" parent="Container/Center/HBox/Content" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_right = 368.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblEntry" type="Label" parent="Container/Center/HBox/Content" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 50.0
+margin_right = 150.0
+margin_bottom = 81.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken CT"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblEntryPrice" type="Label" parent="Container/Center/HBox/Content" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 50.0
+margin_right = 254.0
+margin_bottom = 81.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnEntryR" type="Button" parent="Container/Center/HBox/Content" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 47.0
+margin_right = 311.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnEntryR3" type="Button" parent="Container/Center/HBox/Content" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 47.0
+margin_right = 368.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblMid" type="Label" parent="Container/Center/HBox/Content" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 97.0
+margin_right = 150.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken CTX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblMidPrice" type="Label" parent="Container/Center/HBox/Content" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 97.0
+margin_right = 254.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnMidR" type="Button" parent="Container/Center/HBox/Content" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 94.0
+margin_right = 311.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnMidR3" type="Button" parent="Container/Center/HBox/Content" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 94.0
+margin_right = 368.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblHigh" type="Label" parent="Container/Center/HBox/Content" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 144.0
+margin_right = 150.0
+margin_bottom = 175.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken Gaming"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblHighPrice" type="Label" parent="Container/Center/HBox/Content" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 144.0
+margin_right = 254.0
+margin_bottom = 175.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnHighR" type="Button" parent="Container/Center/HBox/Content" index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 141.0
+margin_right = 311.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnHighR3" type="Button" parent="Container/Center/HBox/Content" index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 141.0
+margin_right = 368.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblEx" type="Label" parent="Container/Center/HBox/Content" index="16"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 191.0
+margin_right = 150.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Chicken Titan"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblExPrice" type="Label" parent="Container/Center/HBox/Content" index="17"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 191.0
+margin_right = 254.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnExR" type="Button" parent="Container/Center/HBox/Content" index="18"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 188.0
+margin_right = 311.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnExR3" type="Button" parent="Container/Center/HBox/Content" index="19"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 188.0
+margin_right = 368.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="Content2" type="GridContainer" parent="Container/Center/HBox" index="1"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 398.0
+margin_right = 766.0
+margin_bottom = 225.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = ExtResource( 2 )
+columns = 4
+_sections_unfolded = [ "Theme", "custom_constants" ]
+
+[node name="lblS2" type="Label" parent="Container/Center/HBox/Content2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 150.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblSPrice2" type="Label" parent="Container/Center/HBox/Content2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 3.0
+margin_right = 254.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnSR2" type="Button" parent="Container/Center/HBox/Content2" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_right = 311.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnSR4" type="Button" parent="Container/Center/HBox/Content2" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_right = 368.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblEntry2" type="Label" parent="Container/Center/HBox/Content2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 50.0
+margin_right = 150.0
+margin_bottom = 81.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef Radeoff"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblEntryPrice2" type="Label" parent="Container/Center/HBox/Content2" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 50.0
+margin_right = 254.0
+margin_bottom = 81.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnEntryR2" type="Button" parent="Container/Center/HBox/Content2" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 47.0
+margin_right = 311.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnEntryR4" type="Button" parent="Container/Center/HBox/Content2" index="7"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 47.0
+margin_right = 368.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblMid2" type="Label" parent="Container/Center/HBox/Content2" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 97.0
+margin_right = 150.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef BX"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblMidPrice2" type="Label" parent="Container/Center/HBox/Content2" index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 97.0
+margin_right = 254.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnMidR2" type="Button" parent="Container/Center/HBox/Content2" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 94.0
+margin_right = 311.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnMidR4" type="Button" parent="Container/Center/HBox/Content2" index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 94.0
+margin_right = 368.0
+margin_bottom = 131.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblHigh2" type="Label" parent="Container/Center/HBox/Content2" index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 144.0
+margin_right = 150.0
+margin_bottom = 175.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef Mining"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblHighPrice2" type="Label" parent="Container/Center/HBox/Content2" index="13"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 144.0
+margin_right = 254.0
+margin_bottom = 175.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnHighR2" type="Button" parent="Container/Center/HBox/Content2" index="14"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 141.0
+margin_right = 311.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnHighR4" type="Button" parent="Container/Center/HBox/Content2" index="15"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 141.0
+margin_right = 368.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[node name="lblEx2" type="Label" parent="Container/Center/HBox/Content2" index="16"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 191.0
+margin_right = 150.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 150, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Beef Vega"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblExPrice2" type="Label" parent="Container/Center/HBox/Content2" index="17"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 170.0
+margin_top = 191.0
+margin_right = 254.0
+margin_bottom = 222.0
+rect_min_size = Vector2( 84, 31 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "$ 100"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="btnExR2" type="Button" parent="Container/Center/HBox/Content2" index="18"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 274.0
+margin_top = 188.0
+margin_right = 311.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "-"
+flat = false
+align = 1
+
+[node name="btnExR4" type="Button" parent="Container/Center/HBox/Content2" index="19"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 331.0
+margin_top = 188.0
+margin_right = 368.0
+margin_bottom = 225.0
+rect_min_size = Vector2( 37, 37 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "+"
+flat = false
+align = 1
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnSR" to="." method="_on_btnSR_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnSR3" to="." method="_on_btnSR3_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnEntryR" to="." method="_on_btnEntryR_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnEntryR3" to="." method="_on_btnEntryR3_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnMidR" to="." method="_on_btnMidR_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnMidR3" to="." method="_on_btnMidR3_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnHighR" to="." method="_on_btnHighR_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnHighR3" to="." method="_on_btnHighR3_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnExR" to="." method="_on_btnExR_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content/btnExR3" to="." method="_on_btnExR3_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnSR2" to="." method="_on_btnSR2_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnSR4" to="." method="_on_btnSR4_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnEntryR2" to="." method="_on_btnEntryR2_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnEntryR4" to="." method="_on_btnEntryR4_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnMidR2" to="." method="_on_btnMidR2_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnMidR4" to="." method="_on_btnMidR4_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnHighR2" to="." method="_on_btnHighR2_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnHighR4" to="." method="_on_btnHighR4_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnExR2" to="." method="_on_btnExR2_pressed"]
+
+[connection signal="pressed" from="Container/Center/HBox/Content2/btnExR4" to="." method="_on_btnExR4_pressed"]
 
 

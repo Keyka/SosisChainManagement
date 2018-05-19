@@ -3,7 +3,7 @@
 [ext_resource path="res://Script/PopUpFarm.gd" type="Script" id=1]
 [ext_resource path="res://Themes/Default.tres" type="Theme" id=2]
 
-[node name="PopUpFarm" type="Container" index="0"]
+[node name="PopUpFarm" type="Container"]
 
 anchor_left = 0.0
 anchor_top = 0.0
