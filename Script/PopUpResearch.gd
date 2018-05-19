@@ -12,6 +12,32 @@ func _ready():
 
 func _process(delta):
 	refreshBuilding()
+	
+	if Global.lvlResearch == 4:
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnResearchUpgrade".disabled = true
+	else : 
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnResearchUpgrade".disabled = false
+	
+	if Global.lvlResearch <= Global.lvlFarm || Global.lvlFarm == 4:
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnFarmUpgrade".disabled = true
+	else : 
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnFarmUpgrade".disabled = false
+	
+	if Global.lvlResearch <= Global.lvlFactory || Global.lvlFactory == 4:
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnFactoryUpgrade".disabled = true
+	else : 
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnFactoryUpgrade".disabled = false
+	
+	if Global.lvlResearch <= Global.lvlMarketing || Global.lvlMarketing == 4:
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnMarketingUpgrade".disabled = true
+	else : 
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnMarketingUpgrade".disabled = false
+	
+	if Global.lvlResearch <= Global.lvlWarehouse || Global.lvlWarehouse == 4:
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnWarehouseUpgrade".disabled = true
+	else : 
+		$"/root/Play/PopUpResearch/Container/Building/Center/Content/btnWarehouseUpgrade".disabled = false
+	
 	pass
 
 #Building
@@ -22,11 +48,16 @@ func refreshBuilding():
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblResearchLevel").text = "Lv " + str(Global.lvlResearch)
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblWarehouseLevel").text = "Lv " + str(Global.lvlWarehouse)
 	
-	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFarmPrice").text = "$ " + str(hargaFarm[Global.lvlFarm-1])
-	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFactoryPrice").text = "$ " + str(hargaFactory[Global.lvlFactory-1])
-	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblMarketingPrice").text = "$ " + str(hargaMarketing[Global.lvlMarketing-1])
-	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblResearchPrice").text = "$ " + str(hargaResearch[Global.lvlResearch-1])
-	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblWarehousePrice").text = "$ " + str(hargaWarehouse[Global.lvlWarehouse-1])
+	if Global.lvlFarm < 4 :
+		get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFarmPrice").text = "$ " + str(hargaFarm[Global.lvlFarm-1])
+	if Global.lvlFactory < 4 :
+		get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFactoryPrice").text = "$ " + str(hargaFactory[Global.lvlFactory-1])
+	if Global.lvlMarketing < 4 :
+		get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblMarketingPrice").text = "$ " + str(hargaMarketing[Global.lvlMarketing-1])
+	if Global.lvlResearch < 4 :
+		get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblResearchPrice").text = "$ " + str(hargaResearch[Global.lvlResearch-1])
+	if Global.lvlWarehouse < 4 :
+		get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblWarehousePrice").text = "$ " + str(hargaWarehouse[Global.lvlWarehouse-1])
 
 func _on_btnFarmUpgrade_pressed():
 	if Global.lvlResearch > Global.lvlFarm :
