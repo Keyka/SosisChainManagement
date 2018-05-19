@@ -3,7 +3,6 @@ extends "res://Script/PlayContent.gd"
 var capacity = []
 
 func _ready():
-	refreshLabel()
 	pass
 
 func refreshLabel() :

@@ -13,6 +13,7 @@ var type = ["Entry", "Mid", "High", "Ex"]
 func _ready():
 	for i in range(4) : 
 		get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i] +"R").disabled = true
+		get_node("/root/Play/PopUpResearch/Container/Sausage/Center/Content/btn"+ type[i] +"R2").disabled = true
 	pass
 
 func _process(delta):
@@ -119,10 +120,12 @@ func unlockSausage(levelRequirement,bc):
 		#BC : 1 = Chicken ; 2 = Beef
 		if bc == 1 && Global.money >= hargaChicken[levelRequirement] :
 			Global.sChicken[levelRequirement] = true
+			Global.money -= hargaChicken[levelRequirement]
 			#print(Global.sChicken[levelRequirement])
 		elif bc == 2 && Global.money >= hargaBeef[levelRequirement] :
 			Global.sBeef[levelRequirement] = true
-		
+			Global.money -= hargaBeef[levelRequirement]
+		get_node("/root/Play/BaseHud/StatusBar/" + "vboxDateMoney/lblMoney").text = "$ " + String(Global.money) 
 	pass
 	
 func refreshSausage():
