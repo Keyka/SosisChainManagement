@@ -14,8 +14,8 @@ func _process(delta):
 	refreshBuilding()
 	pass
 
+#Building
 func refreshBuilding():
-	
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFarmLevel").text = "Lv " + str(Global.lvlFarm)
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblFactoryLevel").text = "Lv " + str(Global.lvlFactory)
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblMarketingLevel").text = "Lv " + str(Global.lvlMarketing)
@@ -27,7 +27,6 @@ func refreshBuilding():
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblMarketingPrice").text = "$ " + str(hargaMarketing[Global.lvlMarketing-1])
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblResearchPrice").text = "$ " + str(hargaResearch[Global.lvlResearch-1])
 	get_node("/root/Play/PopUpResearch/Container/Building/Center/Content/lblWarehousePrice").text = "$ " + str(hargaWarehouse[Global.lvlWarehouse-1])
-	
 
 func _on_btnFarmUpgrade_pressed():
 	if Global.lvlResearch > Global.lvlFarm :
@@ -38,7 +37,6 @@ func _on_btnFarmUpgrade_pressed():
 	
 	pass # replace with function body
 
-
 func _on_btnFactoryUpgrade_pressed():
 	if Global.lvlResearch > Global.lvlFactory :
 		if Global.money >= hargaFactory[Global.lvlFactory-1] :
@@ -47,7 +45,6 @@ func _on_btnFactoryUpgrade_pressed():
 			get_node("/root/Play/BaseHud/StatusBar/" + "vboxDateMoney/lblMoney").text = "$ " + String(Global.money) 
 	
 	pass # replace with function body
-
 
 func _on_btnMarketingUpgrade_pressed():
 	if Global.lvlResearch > Global.lvlMarketing :
@@ -58,7 +55,6 @@ func _on_btnMarketingUpgrade_pressed():
 	
 	pass # replace with function body
 
-
 func _on_btnWarehouseUpgrade_pressed():
 	if Global.lvlResearch > Global.lvlWarehouse :
 		if Global.money >= hargaWarehouse[Global.lvlWarehouse-1] :
@@ -68,11 +64,42 @@ func _on_btnWarehouseUpgrade_pressed():
 	
 	pass # replace with function body
 
-
 func _on_btnResearchUpgrade_pressed():
 	if Global.money >= hargaResearch[Global.lvlResearch-1] :
 		Global.money -= hargaResearch[Global.lvlResearch-1]
 		Global.lvlResearch += 1
 		get_node("/root/Play/BaseHud/StatusBar/" + "vboxDateMoney/lblMoney").text = "$ " + String(Global.money) 
 		
+	pass # replace with function body
+
+#Chicken
+func _on_btnEntryR_pressed():
+	pass # replace with function body
+
+
+func _on_btnMidR_pressed():
+	pass # replace with function body
+
+
+func _on_btnHighR_pressed():
+	pass # replace with function body
+
+
+func _on_btnExR_pressed():
+	pass # replace with function body
+
+#Beef
+func _on_btnEntryR2_pressed():
+	pass # replace with function body
+
+
+func _on_btnMidR2_pressed():
+	pass # replace with function body
+
+
+func _on_btnHighR2_pressed():
+	pass # replace with function body
+
+
+func _on_btnExR2_pressed():
 	pass # replace with function body

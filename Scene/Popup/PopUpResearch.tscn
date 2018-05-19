@@ -41,7 +41,6 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Building" type="Tabs" parent="Container" index="0"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -101,15 +100,96 @@ custom_constants/hseparation = 20
 columns = 4
 _sections_unfolded = [ "custom_constants" ]
 
-[node name="lblFarm" type="Label" parent="Container/Building/Center/Content" index="0"]
+[node name="Pad" type="Label" parent="Container/Building/Center/Content" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 3.0
 margin_right = 104.0
-margin_bottom = 34.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Pad2" type="Label" parent="Container/Building/Center/Content" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 124.0
+margin_right = 172.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "----"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Pad3" type="Label" parent="Container/Building/Center/Content" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 192.0
+margin_right = 264.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "------"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Pad4" type="Label" parent="Container/Building/Center/Content" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 284.0
+margin_right = 376.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "----"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="lblFarm" type="Label" parent="Container/Building/Center/Content" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 44.0
+margin_right = 104.0
+margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -122,16 +202,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblFarmLevel" type="Label" parent="Container/Building/Center/Content" index="1"]
+[node name="lblFarmLevel" type="Label" parent="Container/Building/Center/Content" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 3.0
-margin_right = 158.0
-margin_bottom = 34.0
+margin_top = 44.0
+margin_right = 172.0
+margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -144,16 +224,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblFarmPrice" type="Label" parent="Container/Building/Center/Content" index="2"]
+[node name="lblFarmPrice" type="Label" parent="Container/Building/Center/Content" index="6"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 178.0
-margin_top = 3.0
-margin_right = 229.0
-margin_bottom = 34.0
+margin_left = 192.0
+margin_top = 44.0
+margin_right = 264.0
+margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -166,15 +246,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnFarmUpgrade" type="Button" parent="Container/Building/Center/Content" index="3"]
+[node name="btnFarmUpgrade" type="Button" parent="Container/Building/Center/Content" index="7"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 249.0
-margin_right = 341.0
-margin_bottom = 37.0
+margin_left = 284.0
+margin_top = 41.0
+margin_right = 376.0
+margin_bottom = 78.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -192,15 +273,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
-[node name="lblFactory" type="Label" parent="Container/Building/Center/Content" index="4"]
+[node name="lblFactory" type="Label" parent="Container/Building/Center/Content" index="8"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 50.0
+margin_top = 91.0
 margin_right = 104.0
-margin_bottom = 81.0
+margin_bottom = 122.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -213,16 +294,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblFactoryLevel" type="Label" parent="Container/Building/Center/Content" index="5"]
+[node name="lblFactoryLevel" type="Label" parent="Container/Building/Center/Content" index="9"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 50.0
-margin_right = 158.0
-margin_bottom = 81.0
+margin_top = 91.0
+margin_right = 172.0
+margin_bottom = 122.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -235,16 +316,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblFactoryPrice" type="Label" parent="Container/Building/Center/Content" index="6"]
+[node name="lblFactoryPrice" type="Label" parent="Container/Building/Center/Content" index="10"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 178.0
-margin_top = 50.0
-margin_right = 229.0
-margin_bottom = 81.0
+margin_left = 192.0
+margin_top = 91.0
+margin_right = 264.0
+margin_bottom = 122.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -257,16 +338,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnFactoryUpgrade" type="Button" parent="Container/Building/Center/Content" index="7"]
+[node name="btnFactoryUpgrade" type="Button" parent="Container/Building/Center/Content" index="11"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 249.0
-margin_top = 47.0
-margin_right = 341.0
-margin_bottom = 84.0
+margin_left = 284.0
+margin_top = 88.0
+margin_right = 376.0
+margin_bottom = 125.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -284,15 +365,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
-[node name="lblMarketing" type="Label" parent="Container/Building/Center/Content" index="8"]
+[node name="lblMarketing" type="Label" parent="Container/Building/Center/Content" index="12"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 97.0
+margin_top = 138.0
 margin_right = 104.0
-margin_bottom = 128.0
+margin_bottom = 169.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -305,16 +386,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblMarketingLevel" type="Label" parent="Container/Building/Center/Content" index="9"]
+[node name="lblMarketingLevel" type="Label" parent="Container/Building/Center/Content" index="13"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 97.0
-margin_right = 158.0
-margin_bottom = 128.0
+margin_top = 138.0
+margin_right = 172.0
+margin_bottom = 169.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -327,16 +408,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblMarketingPrice" type="Label" parent="Container/Building/Center/Content" index="10"]
+[node name="lblMarketingPrice" type="Label" parent="Container/Building/Center/Content" index="14"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 178.0
-margin_top = 97.0
-margin_right = 229.0
-margin_bottom = 128.0
+margin_left = 192.0
+margin_top = 138.0
+margin_right = 264.0
+margin_bottom = 169.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -349,16 +430,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnMarketingUpgrade" type="Button" parent="Container/Building/Center/Content" index="11"]
+[node name="btnMarketingUpgrade" type="Button" parent="Container/Building/Center/Content" index="15"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 249.0
-margin_top = 94.0
-margin_right = 341.0
-margin_bottom = 131.0
+margin_left = 284.0
+margin_top = 135.0
+margin_right = 376.0
+margin_bottom = 172.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -376,15 +457,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
-[node name="lblWarehouse" type="Label" parent="Container/Building/Center/Content" index="12"]
+[node name="lblWarehouse" type="Label" parent="Container/Building/Center/Content" index="16"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 144.0
+margin_top = 185.0
 margin_right = 104.0
-margin_bottom = 175.0
+margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -397,16 +478,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblWarehouseLevel" type="Label" parent="Container/Building/Center/Content" index="13"]
+[node name="lblWarehouseLevel" type="Label" parent="Container/Building/Center/Content" index="17"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 144.0
-margin_right = 158.0
-margin_bottom = 175.0
+margin_top = 185.0
+margin_right = 172.0
+margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -419,16 +500,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblWarehousePrice" type="Label" parent="Container/Building/Center/Content" index="14"]
+[node name="lblWarehousePrice" type="Label" parent="Container/Building/Center/Content" index="18"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 178.0
-margin_top = 144.0
-margin_right = 229.0
-margin_bottom = 175.0
+margin_left = 192.0
+margin_top = 185.0
+margin_right = 264.0
+margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -441,16 +522,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnWarehouseUpgrade" type="Button" parent="Container/Building/Center/Content" index="15"]
+[node name="btnWarehouseUpgrade" type="Button" parent="Container/Building/Center/Content" index="19"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 249.0
-margin_top = 141.0
-margin_right = 341.0
-margin_bottom = 178.0
+margin_left = 284.0
+margin_top = 182.0
+margin_right = 376.0
+margin_bottom = 219.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -468,15 +549,15 @@ flat = false
 align = 1
 _sections_unfolded = [ "Theme" ]
 
-[node name="lblResearch" type="Label" parent="Container/Building/Center/Content" index="16"]
+[node name="lblResearch" type="Label" parent="Container/Building/Center/Content" index="20"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 191.0
+margin_top = 232.0
 margin_right = 104.0
-margin_bottom = 222.0
+margin_bottom = 263.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -489,16 +570,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblResearchLevel" type="Label" parent="Container/Building/Center/Content" index="17"]
+[node name="lblResearchLevel" type="Label" parent="Container/Building/Center/Content" index="21"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 124.0
-margin_top = 191.0
-margin_right = 158.0
-margin_bottom = 222.0
+margin_top = 232.0
+margin_right = 172.0
+margin_bottom = 263.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -511,16 +592,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="lblResearchPrice" type="Label" parent="Container/Building/Center/Content" index="18"]
+[node name="lblResearchPrice" type="Label" parent="Container/Building/Center/Content" index="22"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 178.0
-margin_top = 191.0
-margin_right = 229.0
-margin_bottom = 222.0
+margin_left = 192.0
+margin_top = 232.0
+margin_right = 264.0
+margin_bottom = 263.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -533,16 +614,16 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="btnResearchUpgrade" type="Button" parent="Container/Building/Center/Content" index="19"]
+[node name="btnResearchUpgrade" type="Button" parent="Container/Building/Center/Content" index="23"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 249.0
-margin_top = 188.0
-margin_right = 341.0
-margin_bottom = 225.0
+margin_left = 284.0
+margin_top = 229.0
+margin_right = 376.0
+margin_bottom = 266.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -603,9 +684,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 381.0
+margin_left = 370.0
 margin_top = 36.0
-margin_right = 719.0
+margin_right = 729.0
 margin_bottom = 484.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -644,7 +725,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -652,9 +733,12 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+text = "------"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_colors" ]
 
 [node name="pad2" type="Label" parent="Container/Sausage/Center/Content" index="2"]
 
@@ -662,8 +746,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
-margin_right = 338.0
+margin_left = 261.0
+margin_right = 359.0
 margin_bottom = 31.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -703,7 +787,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 44.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -722,9 +806,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 41.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 78.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -769,7 +853,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 91.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 122.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -788,9 +872,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 88.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 125.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -835,7 +919,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 138.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 169.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -854,9 +938,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 135.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 172.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -901,7 +985,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 185.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 216.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -920,9 +1004,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 182.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 219.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -948,6 +1032,7 @@ anchor_bottom = 0.0
 margin_top = 229.0
 margin_right = 149.0
 margin_bottom = 260.0
+rect_min_size = Vector2( 149, 31 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -958,6 +1043,7 @@ text = "Beef"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 [node name="pad3" type="Label" parent="Container/Sausage/Center/Content" index="16"]
 
@@ -967,8 +1053,9 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 229.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 260.0
+rect_min_size = Vector2( 72, 31 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -978,6 +1065,7 @@ size_flags_vertical = 4
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
 
 [node name="pad4" type="Label" parent="Container/Sausage/Center/Content" index="17"]
 
@@ -985,9 +1073,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 229.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 260.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1027,7 +1115,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 273.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 304.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1046,9 +1134,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 270.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 307.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1093,7 +1181,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 320.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 351.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1112,9 +1200,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 317.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 354.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1159,7 +1247,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 367.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 398.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1178,9 +1266,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 364.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 401.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1225,7 +1313,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 169.0
 margin_top = 414.0
-margin_right = 220.0
+margin_right = 241.0
 margin_bottom = 445.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1244,9 +1332,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 240.0
+margin_left = 261.0
 margin_top = 411.0
-margin_right = 338.0
+margin_right = 359.0
 margin_bottom = 448.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -1272,5 +1360,21 @@ align = 1
 [connection signal="pressed" from="Container/Building/Center/Content/btnWarehouseUpgrade" to="." method="_on_btnWarehouseUpgrade_pressed"]
 
 [connection signal="pressed" from="Container/Building/Center/Content/btnResearchUpgrade" to="." method="_on_btnResearchUpgrade_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnEntryR" to="." method="_on_btnEntryR_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnMidR" to="." method="_on_btnMidR_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnHighR" to="." method="_on_btnHighR_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnExR" to="." method="_on_btnExR_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnEntryR2" to="." method="_on_btnEntryR2_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnMidR2" to="." method="_on_btnMidR2_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnHighR2" to="." method="_on_btnHighR2_pressed"]
+
+[connection signal="pressed" from="Container/Sausage/Center/Content/btnExR2" to="." method="_on_btnExR2_pressed"]
 
 
