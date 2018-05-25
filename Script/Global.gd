@@ -30,6 +30,12 @@ var hBeef = [25,25,25,25,25]
 var vChicken = [25,25,25,25,25]
 var vBeef = [25,25,25,25,25]
 
+#SES
+var nextp = 350.5
+var curp = 350.5
+var cur = 700
+var alpha = 0.5
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here

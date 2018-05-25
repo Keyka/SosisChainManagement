@@ -1,4 +1,4 @@
-extends "res://Script/PlayContent.gd"
+extends Container
 
 func _ready():
 	pass

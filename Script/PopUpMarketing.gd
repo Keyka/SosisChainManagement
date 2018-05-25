@@ -2,6 +2,7 @@ extends Container
 
 var type = ["S","Entry","Mid","High","Ex"]
 
+
 func _ready():
 	refreshPrice()
 	pass
@@ -12,7 +13,23 @@ func refreshPrice() :
 		get_node("/root/Play/PopUpMarketing/Container/Center/HBox/Content2/lbl" + type[i] + "Price2").text = "$ " + str(Global.hBeef[i])
 		
 
+func _on_OneDayIngame_timeout():
+	if Global.date % 7 == 1 :
+		SES()
+	pass # replace with function body
+
+func SES():
+	Global.nextp = (Global.alpha * Global.cur) + ( 1 - Global.alpha ) * Global.curp
+	print("----------------------------------------")
+	print("Forecast " + str(Global.nextp))
+	print("Produksi " + str(Global.cur))
+	print("Forecast Sebelum " + str(Global.curp))
+	print("Alpha " + str(Global.alpha))
+	Global.curp = Global.nextp
+	pass
+
 func _process(delta):
+	get_node("Container/Center2/lblTarget").text = "Forecast : " + str(Global.nextp).pad_decimals(0)
 	for i in range(5) :
 		if !Global.sChicken[i] :
 			get_node("/root/Play/PopUpMarketing/Container/Center/HBox/Content/lbl" + type[i] + "").hide()
@@ -152,3 +169,6 @@ func _on_btnExR2_pressed():
 func _on_btnExR4_pressed():
 	plus(4,2)
 	pass # replace with function body
+
+
+

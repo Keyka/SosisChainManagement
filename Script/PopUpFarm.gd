@@ -1,4 +1,4 @@
-extends "res://Script/PlayContent.gd"
+extends Container
 
 var capacity = [100,400,700,999]
 var hargaChicken = 100
