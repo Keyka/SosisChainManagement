@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Script/GridBuilding.gd" type="Script" id=1]
-[ext_resource path="res://res/building.jpg" type="Texture" id=2]
-[ext_resource path="res://Themes/Default.tres" type="Theme" id=3]
+[ext_resource path="res://Themes/Default.tres" type="Theme" id=2]
 
-[node name="BuildingGrid" type="CenterContainer" index="0"]
+[node name="BuildingGrid" type="CenterContainer"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -24,13 +23,7 @@ use_top_left = false
 script = ExtResource( 1 )
 _sections_unfolded = [ "Grow Direction", "Rect", "Theme", "custom_constants" ]
 
-[node name="building" type="Sprite" parent="." index="0"]
-
-position = Vector2( 560.409, 242.032 )
-scale = Vector2( 1.82187, 1.80006 )
-texture = ExtResource( 2 )
-
-[node name="Container" type="GridContainer" parent="." index="1"]
+[node name="Container" type="GridContainer" parent="." index="0"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -67,7 +60,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -93,7 +86,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -118,7 +111,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -143,7 +136,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -169,7 +162,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 3 )
+theme = ExtResource( 2 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null

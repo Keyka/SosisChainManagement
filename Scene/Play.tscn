@@ -1,62 +1,84 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Script/Play.gd" type="Script" id=1]
-[ext_resource path="res://Scene/BaseHud.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/BuildingGrid.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Popup/PopUpBaseHud.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scene/Popup/PopUpFarm.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scene/Popup/PopUpFactory.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scene/Popup/PopUpMarketing.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scene/Popup/PopUpResearch.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scene/Popup/PopUpWarehouse.tscn" type="PackedScene" id=9]
+[ext_resource path="res://res/building.jpg" type="Texture" id=2]
+[ext_resource path="res://src/PlaceholderHUD/static.jpg" type="Texture" id=3]
+[ext_resource path="res://res/base.jpg" type="Texture" id=4]
+[ext_resource path="res://Scene/BaseHud.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/BuildingGrid.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/Popup/PopUpBaseHud.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scene/Popup/PopUpFarm.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scene/Popup/PopUpFactory.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scene/Popup/PopUpMarketing.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scene/Popup/PopUpResearch.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scene/Popup/PopUpWarehouse.tscn" type="PackedScene" id=12]
 
 [node name="Play" type="Node"]
 
 script = ExtResource( 1 )
 
-[node name="BaseHud" parent="." index="0" instance=ExtResource( 2 )]
+[node name="building" type="Sprite" parent="." index="0"]
 
-[node name="BuildingGrid" parent="." index="1" instance=ExtResource( 3 )]
+position = Vector2( 640, 360 )
+scale = Vector2( 1.82187, 1.80006 )
+texture = ExtResource( 2 )
 
-[node name="PopUpBaseHud" parent="." index="2" instance=ExtResource( 4 )]
+[node name="static" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 640, 360 )
+texture = ExtResource( 3 )
+
+[node name="base" type="Sprite" parent="static" index="0"]
+
+position = Vector2( 1.89471, -0.0201788 )
+scale = Vector2( 1.42025, 1.8568 )
+texture = ExtResource( 4 )
+
+[node name="BaseHud" parent="." index="2" instance=ExtResource( 5 )]
+
+[node name="BuildingGrid" parent="." index="3" instance=ExtResource( 6 )]
+
+[node name="PopUpBaseHud" parent="." index="4" instance=ExtResource( 7 )]
 
 visible = false
 
-[node name="PopUpFarm" parent="." index="3" instance=ExtResource( 5 )]
+[node name="PopUpFarm" parent="." index="5" instance=ExtResource( 8 )]
 
 visible = false
 
-[node name="PopUpFactory" parent="." index="4" instance=ExtResource( 6 )]
+[node name="PopUpFactory" parent="." index="6" instance=ExtResource( 9 )]
 
 visible = false
 
-[node name="PopUpMarketing" parent="." index="5" instance=ExtResource( 7 )]
+[node name="PopUpMarketing" parent="." index="7" instance=ExtResource( 10 )]
 
 visible = false
 
-[node name="PopUpResearch" parent="." index="6" instance=ExtResource( 8 )]
+[node name="PopUpResearch" parent="." index="8" instance=ExtResource( 11 )]
 
 visible = false
 
-[node name="PopUpWarehouse" parent="." index="7" instance=ExtResource( 9 )]
+[node name="PopUpWarehouse" parent="." index="9" instance=ExtResource( 12 )]
 
 visible = false
 
-[node name="OneSecond" type="Timer" parent="." index="8"]
+[node name="OneSecond" type="Timer" parent="." index="10"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = true
 
-[node name="OneMinutes" type="Timer" parent="." index="9"]
+[node name="OneMinutes" type="Timer" parent="." index="11"]
 
 process_mode = 1
 wait_time = 60.0
 one_shot = false
 autostart = false
 
-[node name="OneDayIngame" type="Timer" parent="." index="10"]
+[node name="OneDayIngame" type="Timer" parent="." index="12"]
 
 process_mode = 1
 wait_time = 1800.0

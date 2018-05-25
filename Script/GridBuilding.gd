@@ -25,7 +25,7 @@ func _on_btnMarketing_pressed():
 
 
 func _on_btnWarehouse_pressed():
-	get_node("/root/Play").get_node("PopUpFWarehouse").show()
+	get_node("/root/Play").get_node("PopUpWarehouse").show()
 	#get_node("/root/Play/BuildingGrid").hide()
 	Global.location = "Warehouse"
 	pass # replace with function body

@@ -47,10 +47,13 @@ func _process(delta):
 		get_node("/root/Play/PopUpBaseHud/vboxTitle/lblTop").text = Global.location
 		get_node("/root/Play/BuildingGrid").hide()
 		get_node("/root/Play/PopUpBaseHud").show()
+		get_node("/root/Play/building").hide()
+		get_node("/root/Play/static").show()
 	else :
 		hidePopUps()
 		get_node("/root/Play/BuildingGrid").show()
-		
+		get_node("/root/Play/building").show()
+		get_node("/root/Play/static").hide()
 		
 func hidePopUps():
 	get_node("/root/Play/PopUpBaseHud/vboxTitle/lblTop").text = ""
