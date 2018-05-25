@@ -26,6 +26,10 @@ var pakanCow = 100
 var hChicken = [25,25,25,25,25]
 var hBeef = [25,25,25,25,25]
 
+#Warehouse
+var vChicken = [25,25,25,25,25]
+var vBeef = [25,25,25,25,25]
+
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
