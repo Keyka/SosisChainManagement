@@ -13,7 +13,7 @@
 [ext_resource path="res://Scene/Popup/PopUpResearch.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scene/Popup/PopUpWarehouse.tscn" type="PackedScene" id=12]
 
-[node name="Play" type="Node"]
+[node name="Play" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

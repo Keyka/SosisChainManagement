@@ -31,16 +31,16 @@ var vChicken = [25,25,25,25,25]
 var vBeef = [25,25,25,25,25]
 
 #SES
-var nextp = 350.5
-var curp = 350.5
+var curp = 630.1
 var cur = 700
-var alpha = 0.5
+var alpha = 0.9
+var nextp = 630.1
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-
 	pass
+
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
