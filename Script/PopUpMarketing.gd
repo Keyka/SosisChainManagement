@@ -1,9 +1,10 @@
 extends Container
 
 var type = ["S","Entry","Mid","High","Ex"]
-
+var alphaArray = [[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0]]
 
 func _ready():
+	
 	refreshPrice()
 	pass
 
@@ -13,20 +14,45 @@ func refreshPrice() :
 		get_node("/root/Play/PopUpMarketing/Container/Center/HBox/Content2/lbl" + type[i] + "Price2").text = "$ " + str(Global.hBeef[i])
 		
 
-func _on_OneDayIngame_timeout():
-	if Global.date % 7 == 1 :
-		SES()
+func _on_Reforecast_timeout():
+	#Single Expo Smoo
+	Global.curp = Global.nextp
+	Global.cur = Global.next
+	Global.nextp = SES(Global.alpha)
 	pass # replace with function body
 
-func SES():
-	Global.nextp = (Global.alpha * Global.cur) + ( 1 - Global.alpha ) * Global.curp
-	print("----------------------------------------")
-	print("Forecast " + str(Global.nextp))
-	print("Produksi " + str(Global.cur))
-	print("Forecast Sebelum " + str(Global.curp))
-	print("Alpha " + str(Global.alpha))
-	Global.curp = Global.nextp
-	pass
+func _on_Realpha_timeout():
+	#mengisi error
+	print("looping pengisian error")
+	for i in range(alphaArray.size()):
+		alphaArray[i][1] = SESerror(SES(alphaArray[i][0]))
+		print("Alpha " + str(alphaArray[i][0]) + " : " + str(alphaArray[i][1]) )
+	#mencari error terendah
+	var min_val = 0
+	for i in range(alphaArray.size()):
+		min_val = min(min_val, alphaArray[i][1])
+	#mencari alpha
+	var alp = alphaArray.find(min_val)
+	Global.alpha = alphaArray[alp][0]
+	print(Global.alpha)
+	pass # replace with function body
+	
+func SESerror(prediksi):
+	var er = abs((Global.next - prediksi) / Global.next / 100)
+	return er
+
+func SES(alpha):
+#	Global.nextp = (Global.alpha * Global.cur) + ( 1 - Global.alpha ) * Global.curp
+#	print("----------------------------------------")
+#	print("Forecast " + str(Global.nextp))
+#	print("Produksi " + str(Global.cur))
+#	print("Forecast Sebelum " + str(Global.curp))
+#	print("Alpha " + str(Global.alpha))
+#	Global.curp = Global.nextp
+	
+	var hasil = (alpha * Global.cur) + ( 1 - alpha ) * Global.curp
+	print("SES : " + str(hasil))
+	return hasil
 
 func _process(delta):
 	get_node("Container/Center2/lblTarget").text = "Forecast : " + str(Global.nextp).pad_decimals(0)
@@ -169,6 +195,4 @@ func _on_btnExR2_pressed():
 func _on_btnExR4_pressed():
 	plus(4,2)
 	pass # replace with function body
-
-
 

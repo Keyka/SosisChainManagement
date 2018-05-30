@@ -1098,10 +1098,17 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Theme" ]
 
-[node name="OneDayIngame" type="Timer" parent="." index="1"]
+[node name="Reforecast" type="Timer" parent="." index="1"]
 
 process_mode = 1
 wait_time = 10.0
+one_shot = false
+autostart = true
+
+[node name="Realpha" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 40.0
 one_shot = false
 autostart = true
 
@@ -1145,6 +1152,8 @@ autostart = true
 
 [connection signal="pressed" from="Container/Center/HBox/Content2/btnExR4" to="." method="_on_btnExR4_pressed"]
 
-[connection signal="timeout" from="OneDayIngame" to="." method="_on_OneDayIngame_timeout"]
+[connection signal="timeout" from="Reforecast" to="." method="_on_Reforecast_timeout"]
+
+[connection signal="timeout" from="Realpha" to="." method="_on_Realpha_timeout"]
 
 

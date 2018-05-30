@@ -31,10 +31,11 @@ var vChicken = [25,25,25,25,25]
 var vBeef = [25,25,25,25,25]
 
 #SES
-var curp = 630.1
-var cur = 700
+var curp = 41
+var cur = 57
+var next = 93
 var alpha = 0.9
-var nextp = 630.1
+var nextp = 41
 
 func _ready():
 	# Called every time the node is added to the scene.
