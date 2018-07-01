@@ -7,10 +7,7 @@ path="res://.import/2.png-5bc8cfdb233c397833e25b05f6b81748.stex"
 [deps]
 
 source_file="res://src/tilesv2/2.png"
-source_md5="c32c3e8f93d62facb9e5d338480cb589"
-
 dest_files=[ "res://.import/2.png-5bc8cfdb233c397833e25b05f6b81748.stex" ]
-dest_md5="07848bdfdff6ce786e1370846b83a342"
 
 [params]
 

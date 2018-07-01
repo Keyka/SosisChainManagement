@@ -7,10 +7,7 @@ path="res://.import/upgrade.jpg-6eef91cc50f7e21b9b4af8b722951280.stex"
 [deps]
 
 source_file="res://Scene/Popup/upgrade.jpg"
-source_md5="ae08365af24d6c9111238c9d09afa307"
-
 dest_files=[ "res://.import/upgrade.jpg-6eef91cc50f7e21b9b4af8b722951280.stex" ]
-dest_md5="bf71f163e1b9f0c538ac0493e90eec76"
 
 [params]
 

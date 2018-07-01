@@ -7,10 +7,7 @@ path="res://.import/building.jpg-8478d7bd2d8c4fd1b2aea46bb0da66c0.stex"
 [deps]
 
 source_file="res://res/building.jpg"
-source_md5="2a4faf28ab6e1a4961a4bd7d17bfcd38"
-
 dest_files=[ "res://.import/building.jpg-8478d7bd2d8c4fd1b2aea46bb0da66c0.stex" ]
-dest_md5="ed0f9a81beb4fcf0886c7091e242c217"
 
 [params]
 

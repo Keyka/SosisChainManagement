@@ -7,10 +7,7 @@ path="res://.import/MINIME.png-e73ec1c6c2882c14175ed34e1a1b3213.stex"
 [deps]
 
 source_file="res://src/MINIME.png"
-source_md5="b8fb997527836839a6cb3f0cefa305c9"
-
 dest_files=[ "res://.import/MINIME.png-e73ec1c6c2882c14175ed34e1a1b3213.stex" ]
-dest_md5="e094d3f3e743444468a671000614d99c"
 
 [params]
 

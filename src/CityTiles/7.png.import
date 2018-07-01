@@ -7,10 +7,7 @@ path="res://.import/7.png-921282f3d58a15c75a5c8bfd0fba86ca.stex"
 [deps]
 
 source_file="res://src/CityTiles/7.png"
-source_md5="9390fbd6367f18242401971648a1359c"
-
 dest_files=[ "res://.import/7.png-921282f3d58a15c75a5c8bfd0fba86ca.stex" ]
-dest_md5="9c0e4303281c4e9aa01995a53880f839"
 
 [params]
 

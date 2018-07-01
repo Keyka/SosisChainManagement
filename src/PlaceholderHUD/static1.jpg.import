@@ -7,10 +7,7 @@ path="res://.import/static1.jpg-75a9734649a65c16572fa727d12c9182.stex"
 [deps]
 
 source_file="res://src/PlaceholderHUD/static1.jpg"
-source_md5="c7cc869eab92dfac3fd63d119d896979"
-
 dest_files=[ "res://.import/static1.jpg-75a9734649a65c16572fa727d12c9182.stex" ]
-dest_md5="9874b7596a0e0fa16db8255c1653af1e"
 
 [params]
 
