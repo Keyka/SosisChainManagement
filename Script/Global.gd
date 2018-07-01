@@ -33,7 +33,7 @@ var vBeef = [25,25,25,25,25]
 #SES
 var curp = 41 #prediksi sekarang
 var cur = 57  #produksi yang diapaki buat curp
-var next = 93 #produksi sekarang
+var next = 0 #produksi sekarang
 var alpha = 0.9 
 var nextp = 41 # prediksi bulan depan
 

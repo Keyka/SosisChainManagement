@@ -42,14 +42,6 @@ func SESerror(prediksi):
 	return er
 
 func SES(alpha):
-#	Global.nextp = (Global.alpha * Global.cur) + ( 1 - Global.alpha ) * Global.curp
-#	print("----------------------------------------")
-#	print("Forecast " + str(Global.nextp))
-#	print("Produksi " + str(Global.cur))
-#	print("Forecast Sebelum " + str(Global.curp))
-#	print("Alpha " + str(Global.alpha))
-#	Global.curp = Global.nextp
-	
 	var hasil = (alpha * Global.cur) + ( 1 - alpha ) * Global.curp
 	print("SES : " + str(hasil))
 	return hasil
