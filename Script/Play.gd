@@ -26,7 +26,26 @@ func _on_OneSecond_timeout():
 	pass # replace with function body
 
 func _on_OneMinutes_timeout():
-	
+	while true :
+		var buyThis = randi()%6 + Global.level
+		var random = randi()%5
+		var chooser = randi()%2
+		if chooser == 1 :
+			if Global.vBeef[random] > 0 :
+				if Global.vBeef[random] >= buyThis :
+					Global.vBeef[random] -= buyThis
+				else :
+					buyThis = Global.vBeef[random]
+					Global.vBeef[random] = 0
+			Global.money += buyThis * Global.hBeef[random] 
+		else :
+			if Global.vChicken[random] > 0 :
+				if Global.vChicken[random] >= buyThis :
+					Global.vChicken[random] -= buyThis
+				else :
+					buyThis = Global.vChicken[random]
+					Global.vChicken[random] = 0
+			Global.money += buyThis * Global.hChicken[random]
 	pass # replace with function body
 
 func _on_OneDayIngame_timeout():
